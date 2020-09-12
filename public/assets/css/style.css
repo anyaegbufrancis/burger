@@ -7,15 +7,16 @@ body {
   min-height: 60rem;
   margin-left: 5rem;
   padding-bottom: 3rem;
+  border-radius: 5rem;
 }
 .jumbotron {
   padding-top: 0px;
   padding-bottom: 5rem;
-  font-size: 5rem !important;
+  font-size: 8rem !important;
   color: black;
   margin-bottom: 0px;
   background-image: url(../img/burger.gif);
-  border-bottom: blue solid 10px;
+  border-bottom: teal solid 15px;
 }
 .title {
   margin-top: 2rem;
@@ -50,6 +51,7 @@ body {
 .head {
   margin-bottom: 2rem;  
   margin-top: 2rem;
+  color: white !important;
 }
 #holder {
   color: brown;  
@@ -74,12 +76,21 @@ body {
   }
 #add {
   font-size: 34px;
-  color: black;
+  color: white;
   font-style: italic;
+  background-color: green;
+  width: 80rem;
+  margin-left: 15rem;
+  border-radius: 10rem;
+  height: 6rem;
+  padding: 1rem;
 }
 #burger {
-  width: 25rem;
+  width: 35rem;
   border-radius: 6px;
+  height: 4rem;
+  text-align: center;
+  
 }
 #submit {
   border-radius: 8px;
