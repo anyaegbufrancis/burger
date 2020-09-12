@@ -45,7 +45,7 @@ body {
 #name {
   font-size: 29px;
   float: left;
-  color: rgb(180, 172, 172);
+  color: white
 }
 .head {
   margin-bottom: 2rem;  
@@ -56,6 +56,7 @@ body {
 }
 .icon {
   margin-right: 10px;
+  color: red;
 }
 .head {
   background-color: brown;
@@ -64,7 +65,7 @@ body {
   font-size: 48px;
 }
 .name {
-  font-size: 23px
+  font-size: 23px;
 }
 #main:hover,
 .btn:hover {
@@ -91,4 +92,7 @@ body {
 }
 body {
   background-image: url(../img/burger3.png);
+}
+.text-name {
+  color: white;
 }
