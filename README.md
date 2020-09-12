@@ -56,9 +56,15 @@ Please clone the project to your local repo, install the dependencies, start the
   
   ## Display
   
-  Please see the displayed project on my personal portforlio page on:
+  Please see the displayed project on 
   
+  - Personal portforlio page on:
+    
   https://anyaegbufrancis.github.io/personal.portfolio/Pages/portfolio.html
+  
+  - Heroku Dispay Page:
+  
+  https://eat-da-buga.herokuapp.com/
   
   
   ## Questions
