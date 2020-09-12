@@ -7,7 +7,7 @@
       <button class="btn btn-primary btn-lg disabled head">AVAILABLE FOR EATING!</button>
       {{#each burgers}}
       {{#unless devoured}}
-      <div class="btn btn-primary " id="main">
+      <div class="btn btn-primary" id="main">
         <span id="name"><i class='fas fa-hamburger icon'></i>{{burger_name}}</span>
         <button class="btn btn-warning burger-state" id="devour" data-id="{{id}}" data-desiredstate=true>Devour it!
         {{#if devoured}}EATEN!{{else}}</i>{{/if}}</button>
@@ -37,7 +37,7 @@
       <div class="form-group">
         <input type="text" id="burger" name="burger_name" placeholder="Please Enter Burger to Menu">
       </div>
-      <button class="btn btn-info" type="submit" id="submit">Add Burger to Menu</button>
+      <button class="btn btn-info" type="submit" id="submit">SUBMIT</button>
     </form>
     
   </div>
