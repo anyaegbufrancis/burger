@@ -1,6 +1,6 @@
 // Import MySQL & controller connections.
 var connection = require("../config/connection.js");
-const router = require("../controllers/burgers_Controller.js");
+const router = require("../controllers/burgers_controller.js");
 const e = require("express");
 const { deleteAvail } = require("../models/burger.js");
 
