@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/fontawesome.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="/assets/css/style.css" type="text/css" />
+  <title>Burgers MVC</title>
+  <script src="https://code.jquery.com/jquery.js"></script>
+</head>
+
+<body>
+  <div class="jumbotron jumbotron-fluid">
+    <div class="container">
+      <h1 class="display-4">Welcome to Burger Restaurant</h1>
+      <p class="lead">Take your digital seat and enjoy your burger...</p>
+    </div>
+  </div>
+  {{{ body }}}
+</body>
+</html>
+
+<script>
+  // Load DOM & then attach handlers 
+  $(function () {
+    //Change burger state from eaten to waiting to be eaten
+    $(".burger-state").on("click", function (event) {
+      let id = $(this).data("id");
+      let desiredBurgerState = $(this).data("desiredstate");
+      let newBurgerState = { devoured: desiredBurgerState };
+
+      // Send the PUT request.
+      $.ajax("/api/burgers/" + id, {
+        type: "PUT",
+        data: newBurgerState
+      }).then(
+        function () {
+          // Reload the page 
+          location.reload();
+        }
+      );
+    });
+
+    $(".add-new-burger").on("submit", function (event) {
+      event.preventDefault();
+
+      let  newBurger = {
+        name: $("#burger").val().trim(),
+        devoured: 0
+      };
+      console.log(newBurger)
+      if (newBurger.name !== "") {
+        // Send the POST request.
+        $.ajax("/api/burgers", {
+          type: "POST",
+          data: newBurger
+        }).then(
+          function () {
+            // Reload the page
+            location.reload();
+          }
+        )
+      } else {
+        alert(" Please enter a Burger Name!")
+      }
+    });
+
+    $(".delete-burger").on("click", function (event) {
+      let id = $(this).data("id");
+
+      // Send the DELETE request.
+      $.ajax("/api/burgers/" + id, {
+        type: "DELETE"
+      }).then(
+        function () {
+          // Reload the page
+          location.reload();
+        }
+      );
+    });
+  });
+</script>

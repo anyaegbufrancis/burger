@@ -1,0 +1,44 @@
+<div class="container">
+  <h1 class="title">Eat-Da-Burger!</h1>
+
+  <div class="row justify-content-around">
+  
+    <div class="col-sm-5" id="box-box">
+      <button class="btn btn-primary btn-lg disabled head">AVAILABLE FOR EATING!</button>
+      {{#each burgers}}
+      {{#unless devoured}}
+      <div class="btn btn-primary " id="main">
+        <span id="name"><i class='fas fa-hamburger icon'></i>{{burger_name}}</span>
+        <button class="btn btn-warning burger-state" id="devour" data-id="{{id}}" data-desiredstate=true>Devour it!
+        {{#if devoured}}EATEN!{{else}}</i>{{/if}}</button>
+      </div>
+      {{/unless}}
+      {{/each}}
+    </div>
+    
+    
+    <div class="col-sm-5" id="box-box">
+      <button class="btn btn-primary btn-lg disabled head">DEVOURED BURGER!</button>
+      {{#each burgers}}
+      {{#if devoured}}
+      <div class="btn btn-primary " id="main">
+        <span id="name"><i class='fas fa-hamburger icon'></i>{{burger_name}}</span>
+      </div>
+      {{/if}}
+      {{/each}}
+    </div>
+    
+  </div>
+
+  <div class="col-sm-12" id="bottom" style="background-color:none;">
+    <h2 id="add">Add your Favorite Burger</h2>
+
+    <form class="add-new-burger">
+      <div class="form-group">
+        <input type="text" id="burger" name="burger_name" placeholder="Please Enter Burger to Menu">
+      </div>
+      <button class="btn btn-info" type="submit" id="submit">Add Burger to Menu</button>
+    </form>
+    
+  </div>
+</div>
