@@ -36,10 +36,8 @@ var orm = {
       if (err) throw err
       await cb(result);
     });
-  } 
- 
+  }  
 }
-
 
 //Exports ORM to MODELS for consumption by burgers
 module.exports = orm;
